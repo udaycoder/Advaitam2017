@@ -1,0 +1,124 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#main-container {
+ position: relative;
+ margin: 0;
+ padding: 0;
+}
+
+.pane
+{
+  height: 100vh;
+}
+
+.pane-technical
+{
+  background: url('https://s26.postimg.org/4oqu6ywi1/banner.jpg');
+  background-size: cover;
+}
+.pane-cultural
+{
+  background: url('https://s26.postimg.org/4l15l2zgp/concert_768722_960_720.jpg');
+  background-size: cover;
+  background-position: 33.33% 0%;
+  background-repeat: no-repeat;
+}
+.pane-social
+{
+  background: url('https://s26.postimg.org/jahuv7tah/DSC076381.jpg');
+  background-size: cover;
+  background-position:80.66% 0%;
+  background-repeat: no-repeat;
+}
+
+.overlay
+{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.tagline
+{
+  margin-top: 0;
+  font-family: 'LemonMilk', cursive;
+  font-size: 20vw;
+  font-stretch: expanded;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#mobile-container
+{
+  display: none;
+}
+
+#pc-tag{
+  color:white;
+  font-size:20px;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    #main-container {
+       display: none;
+    }
+    #mobile-container
+    {
+      display: block;
+      position:relative;
+    }
+
+    .pane-main
+    {
+      background: url('https://s26.postimg.org/bfbwu591l/CONCERT.jpg');
+      background-size: cover;
+      background-position: 33.33% 2%;
+      background-repeat: no-repeat;
+    }
+
+    .pane-content{
+      padding-top: 5vh;
+      text-align: center;
+    }
+
+    #mobile-container .overlay
+    {
+      position: fixed;
+      top:0;
+      text-align: right;
+      background-color: rgba(0,0,0,0.45);
+    }
+
+    #mobile-container .logo
+    {
+      width: 45vw;
+    }
+
+    #mobile-container .byline
+    {
+      margin-top: 5vh;
+      color: white;
+      font-size: x-large;
+    }
+
+    .content-roll
+    {
+      position: absolute;
+      width: 100vw;
+    }
+    .background-roll
+    {
+      position: absolute;
+      width: 100vw;
+    }
+
+}
