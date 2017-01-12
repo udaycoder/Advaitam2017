@@ -1,5 +1,10 @@
 jQuery(document).ready(function($){
-
+	$('.overlay-pc').fadeIn('slow');
+	$("body").mousemove(function() {
+  $('.overlay-pc').fadeOut("slow");
+	$('.link_tags').fadeIn("slow");
+}
+);
 		$(window).on('scroll', function() {
 
 				var y_scroll_pos = window.pageYOffset;

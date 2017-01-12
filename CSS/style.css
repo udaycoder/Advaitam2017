@@ -22,6 +22,9 @@ a {
   background: url('https://s26.postimg.org/4oqu6ywi1/banner.jpg');
   background-size: cover;
 }
+
+
+
 .pane-cultural
 {
   background: url('https://s26.postimg.org/4l15l2zgp/concert_768722_960_720.jpg');
@@ -53,6 +56,22 @@ a {
   font-size: 20vw;
   font-stretch: expanded;
   color: rgba(255, 255, 255, 0.85);
+}
+
+.link_tags{
+  display:none;
+  font-family: 'LemonMilk', cursive;
+  font-size: 20vw;
+  color:white;
+  padding-left: 30%;
+  padding-top: 10%;
+}
+
+.link_tags_mobile{
+  font-family: 'LemonMilk', cursive;
+  color:white;
+  padding-left: 20%;
+  padding-top: 30%;
 }
 
 #mobile-container
