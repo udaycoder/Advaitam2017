@@ -58,6 +58,10 @@ a {
   color: rgba(255, 255, 255, 0.85);
 }
 
+#main-container .byline {
+  display: none;
+}
+
 .link_tags{
   display:none;
   font-family: 'LemonMilk', cursive;
