@@ -33,10 +33,14 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+var timeout;
+
 	$('.overlay-pc').fadeIn('slow');
 	$("body").mousemove(function() {
   $('.overlay-pc').fadeOut("slow");
 	$('.link_tags').fadeIn("slow");
+	clearTimeout(timeout);
+  timeout = setTimeout(function(){$('.link_tags').fadeOut("fast");$('.overlay-pc').fadeIn('slow');}, 1000);
 }
 );
 		$(window).on('scroll', function() {
