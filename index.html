@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
     <script src="JS/webpageJS.js"></script>
@@ -20,19 +21,130 @@
   <body>
 
     <div class="container-fluid" id="main-container">
-     <div class="pane pane-technical col-md-4"><div class="link_tags"><h1>Technical</h1></div></div>
-     <div class="pane pane-cultural col-md-4"><div class="link_tags"><h1>Cultural</h1></div></div>
-     <div class="pane pane-social col-md-4"><div class="link_tags"><h1>Social</h1></div></div>
-     <div class="overlay overlay-pc" >
+      <div class="pane pane-technical col-md-4"><div class="link_tags"><h1>Technical</h1></div></div>
+      <div class="pane pane-cultural col-md-4"><div class="link_tags"><h1>Cultural</h1></div></div>
+      <div class="pane pane-social col-md-4"><div class="link_tags"><h1>Social</h1></div></div>
+      <div class="overlay overlay-pc" >
+      <div class="header">
         <img src="https://s26.postimg.org/xi7jjv5zd/logo1.png">
+      </div>
+      <div class="hero">
         <h1 class="tagline">#BELIEVE</h1>
         <p class="byline" id="pc-tag">It will be greater than anything you ever witnessed.<br>
-          It will be fun, adventurous, action-packed,<br>
-          puzzling, empowering and illuminating.<br>
-          It will be Magic<br>
-          You just gotta <b style="color:#ff3838">BELIEVE</b>.
+        It will be fun, adventurous, action-packed,<br>
+        puzzling, empowering and illuminating.<br>
+        It will be Magic<br>
+        You just gotta <b style="color:#ff3838">BELIEVE</b>.
         </p>
-        <p id="Timer"></p>
+      </div>
+      <div class="hero-overlay"></div>
+      <p id="timer"></p>
+      <div class="countdown">
+
+        <div class="bloc-time days" data-init-value="24">
+          <span class="count-title">Days</span>
+
+          <div class="figure days days-1">
+            <span class="top">2</span>
+            <span class="top-back">
+              <span>2</span>
+            </span>
+            <span class="bottom">2</span>
+            <span class="bottom-back">
+              <span>2</span>
+            </span>
+          </div>
+
+          <div class="figure hours days-2">
+            <span class="top">4</span>
+            <span class="top-back">
+              <span>4</span>
+            </span>
+            <span class="bottom">4</span>
+            <span class="bottom-back">
+              <span>4</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="bloc-time hours" data-init-value="24">
+          <span class="count-title">Hours</span>
+
+          <div class="figure hours hours-1">
+            <span class="top">2</span>
+            <span class="top-back">
+              <span>2</span>
+            </span>
+            <span class="bottom">2</span>
+            <span class="bottom-back">
+              <span>2</span>
+            </span>
+          </div>
+
+          <div class="figure hours hours-2">
+            <span class="top">4</span>
+            <span class="top-back">
+              <span>4</span>
+            </span>
+            <span class="bottom">4</span>
+            <span class="bottom-back">
+              <span>4</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="bloc-time min" data-init-value="0">
+          <span class="count-title">Minutes</span>
+
+          <div class="figure min min-1">
+            <span class="top">0</span>
+            <span class="top-back">
+              <span>0</span>
+            </span>
+            <span class="bottom">0</span>
+            <span class="bottom-back">
+              <span>0</span>
+            </span>        
+          </div>
+
+          <div class="figure min min-2">
+           <span class="top">0</span>
+            <span class="top-back">
+              <span>0</span>
+            </span>
+            <span class="bottom">0</span>
+            <span class="bottom-back">
+              <span>0</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="bloc-time sec" data-init-value="0">
+          <span class="count-title">Seconds</span>
+
+            <div class="figure sec sec-1">
+            <span class="top">0</span>
+            <span class="top-back">
+              <span>0</span>
+            </span>
+            <span class="bottom">0</span>
+            <span class="bottom-back">
+              <span>0</span>
+            </span>          
+          </div>
+
+          <div class="figure sec sec-2">
+            <span class="top">0</span>
+            <span class="top-back">
+              <span>0</span>
+            </span>
+            <span class="bottom">0</span>
+            <span class="bottom-back">
+              <span>0</span>
+            </span>
+          </div>
+        </div>
+      </div>
      </div>
     </div>
     <div id="mobile-container">
@@ -48,7 +160,7 @@
        <div class="overlay">
            <img class="logo" src="https://s26.postimg.org/xi7jjv5zd/logo1.png">
            <div class="pane-content" id="TagLine-mobile">
-             <p id="Timer-mobile" ></p>
+             <p id="timer-mobile" ></p>
                    <h1 class="tagline">#BELIEVE</h1>
                    <p class="byline">It will be greater than anything you ever witnessed.<br>
                    It will be fun, adventurous, action-packed,<br>
