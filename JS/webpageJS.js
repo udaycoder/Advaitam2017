@@ -53,6 +53,69 @@ jQuery(document).ready(function($){
       
   
   });
+
+  $('.overlay').mousedown(function (e) {
+    //To go thru the overlay we will momentarily hide and redraw the overlay
+    $('.overlay').hide();
+    var self = document.elementFromPoint(e.pageX, e.pageY);
+    console.log(self);
+    $('.overlay').show();
+
+    var $el = $('#main-container').find('.pane');
+    
+    //Other panes
+    var $other=[];
+    $el.each( function(index, element) {
+      console.log(self);
+      
+      if(element !== self)
+        $other.push(element);
+    });
+    
+    console.log($other);
+    //Creating a new animation timeline
+    //var anim = new TweenMax();
+    //Expand the clicked pane
+    TweenMax.to(self, 1, {width: "90%"});
+    TweenMax.to($other, 1, {width:"5%", padding:0});
+    TweenMax.to('.hero, .countdown', 0.5, {opacity: 0, display: "none"});
+    TweenMax.to('.overlay', 0.5, {backgroundColor: "rgba(0,0,0,0)"});
+    $('.link_tags').css({"padding-top": function(){
+        return (window.innerHeight - $(this).height())/2
+      }
+    });
+    $('.link_tags').fadeIn();
+    console.log(self.firstChild);
+    var firstChild = self.firstChild;
+    while(firstChild != null && firstChild.nodeType == 3){ // skip TextNodes
+      firstChild = firstChild.nextSibling;
+    }
+    $other.forEach( function(element, index) {
+      console.log(element);
+      var otherFirstChild = element.firstChild;
+      while(otherFirstChild != null && otherFirstChild.nodeType == 3){ // skip TextNodes
+        otherFirstChild = otherFirstChild.nextSibling;
+      } 
+      TweenMax.to(otherFirstChild.nextSibling.nextSibling, 0.5, {opacity: 0, display: "none"});
+    });
+    firstChild.setAttribute("style","display:none;");
+    firstChild.style.display = "none";
+    TweenMax.to(firstChild.nextSibling.nextSibling, 0.5, {opacity: 1, display: "block"});
+    $('.reset-btn').fadeIn();
+    
+  })
+
+  $('.reset-btn').click(function (e) {
+    TweenMax.to('#main-container .pane', 1, {width: "33.33%"});
+    TweenMax.to('.hero, .countdown', 0.5, {opacity: 1, display: "block"});
+    TweenMax.to('.overlay', 0.5, {backgroundColor: "rgba(0,0,0,0.35)"});
+    $('#main-container .link_tags').fadeOut();
+    $('#main-container .pane-content').fadeOut();
+    $(this).fadeOut();
+
+  })
+
+
   
 
 		$(window).on('scroll', function() {
@@ -71,6 +134,8 @@ jQuery(document).ready(function($){
         		}
 
 		});
+
+
 
 
     //Implementing a separate timer, imported code, may be refactored
