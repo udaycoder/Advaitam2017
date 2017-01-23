@@ -34,8 +34,9 @@ jQuery(document).ready(function($){
   }, 1000);
 
 
-
+  var inPane = false;
   var playingTagline = false;
+  var paneName = null;
 	//On hover over tagline in pc, fade out and fade in the by line....
   if(!playingTagline)
   {
@@ -64,7 +65,9 @@ jQuery(document).ready(function($){
     //To go thru the overlay we will momentarily hide and redraw the overlay
     $('#main-container .overlay').hide();
     var self = document.elementFromPoint(e.pageX, e.pageY);
-    console.log(self);
+    
+    paneName = self.classList[1];
+    console.log(paneName);
     $('.overlay').show();
 
     var $el = $('#main-container').find('.pane');
@@ -86,7 +89,7 @@ jQuery(document).ready(function($){
     TweenMax.to($other, 1, {width:"5%", padding:0});
     TweenMax.to('#main-container .hero, .countdown', 0.5, {opacity: 0, display: "none"});
     TweenMax.to('#main-container .overlay', 0.5, {backgroundColor: "rgba(0,0,0,0)"});
-    $('#main-containerv .link_tags').css({"padding-top": function(){
+    $('#main-container .link_tags').css({"padding-top": function(){
         return (window.innerHeight - $(this).height())/2
       }
     });
@@ -108,7 +111,8 @@ jQuery(document).ready(function($){
     firstChild.style.display = "none";
     TweenMax.to(firstChild.nextSibling.nextSibling, 0.5, {opacity: 1, display: "block"});
     $('#main-container .reset-btn').fadeIn();
-    
+    //$('.overlay-pc').css({"pointer-events": "none"});
+    inPane = true;
   })
 
   $('#main-container .reset-btn').click(function (e) {
@@ -118,11 +122,48 @@ jQuery(document).ready(function($){
     $('#main-container .link_tags').fadeOut();
     $('#main-container .pane-content').fadeOut();
     $(this).fadeOut();
-
+    $('.overlay-pc').css({"pointer-events": "auto"});
+    inPane = false;
   })
 
+  $(document).mousemove(function (e) {
+    if(inPane)
+    {
+      if(paneName == 'pane-technical')
+      {
+        if(e.pageX < (0.9 * window.innerWidth))
+          $('.overlay-pc').css({"pointer-events": "none"});
+        else
+          $('.overlay-pc').css({"pointer-events": "auto"});
+      }
+      else if(paneName == 'pane-cultural')
+      {
+        if((e.pageX < (0.95 * window.innerWidth)) && (e.pageX > (0.05 * window.innerWidth)))
+          $('.overlay-pc').css({"pointer-events": "none"});
+        else
+          $('.overlay-pc').css({"pointer-events": "auto"});
+      }
+      else if(paneName == 'pane-social')
+      {
+        if(e.pageX > (0.1 * window.innerWidth))
+          $('.overlay-pc').css({"pointer-events": "none"});
+        else
+          $('.overlay-pc').css({"pointer-events": "auto"});
+      }
+      
+    }
+    
+  })
 
-  
+  $('.pane-technical button').click(function () {
+    window.location.href = "http://www.google.com";
+  })
+  $('.pane-cultural button').click(function () {
+    window.location.href = "http://www.google.com";
+  })
+  $('.pane-social button').click(function () {
+    window.location.href = "http://www.google.com";
+  })
 
 		$(window).on('scroll', function() {
 

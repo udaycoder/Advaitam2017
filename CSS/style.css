@@ -17,10 +17,6 @@ a {
   height: 100vh;
   padding: 0;
 }
-.pane-content
-{
-  pointer-events: none;
-}
 
 .pane-technical
 {
@@ -90,11 +86,12 @@ a {
   padding-bottom: 5px;
   margin-top: 15px;
   background: transparent;
+  cursor: pointer;
 }
 
 .pane-content button:hover
 {
-  
+  color: black;
   background-color: white;
 }
 
@@ -161,6 +158,7 @@ a {
 .link_tags {
   display: none;
   pointer-events: none;
+  padding-top: 400%;
 }
 .link_tags h1{
   font-family: 'LemonMilk', cursive;
