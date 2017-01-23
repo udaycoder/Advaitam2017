@@ -35,28 +35,34 @@ jQuery(document).ready(function($){
 
 
 
-
+  var playingTagline = false;
 	//On hover over tagline in pc, fade out and fade in the by line....
-  $('#main-container .hero-overlay').hover(function (e) {
-    console.log(e.target);
-      $('#main-container .tagline').fadeOut(500);
+  if(!playingTagline)
+  {
+    $('#main-container .hero-overlay').hover(function (e) {
+      playingTagline = true;
+      $('#main-container .tagline').fadeOut(450);
+      console.log(playingTagline);
       setTimeout(function () {
         $('#main-container .byline').fadeIn();
       }, 500);
 
-  }, function(e) {
-    console.log(e.target);
-      $('#main-container .byline').fadeOut(500);
+    }, function(e) {
+      setTimeout(function () {
+        $('#main-container .byline').fadeOut("fast");
+      }, 550);
       setTimeout(function () {
         $('#main-container .tagline').fadeIn();
-      }, 500);
-      
+        playingTagline = false;
+        console.log(playingTagline);
+      }, 1050);
+    });
+  }
   
-  });
 
-  $('.overlay').mousedown(function (e) {
+  $('#main-container .overlay').mousedown(function (e) {
     //To go thru the overlay we will momentarily hide and redraw the overlay
-    $('.overlay').hide();
+    $('#main-container .overlay').hide();
     var self = document.elementFromPoint(e.pageX, e.pageY);
     console.log(self);
     $('.overlay').show();
@@ -78,13 +84,13 @@ jQuery(document).ready(function($){
     //Expand the clicked pane
     TweenMax.to(self, 1, {width: "90%"});
     TweenMax.to($other, 1, {width:"5%", padding:0});
-    TweenMax.to('.hero, .countdown', 0.5, {opacity: 0, display: "none"});
-    TweenMax.to('.overlay', 0.5, {backgroundColor: "rgba(0,0,0,0)"});
-    $('.link_tags').css({"padding-top": function(){
+    TweenMax.to('#main-container .hero, .countdown', 0.5, {opacity: 0, display: "none"});
+    TweenMax.to('#main-container .overlay', 0.5, {backgroundColor: "rgba(0,0,0,0)"});
+    $('#main-containerv .link_tags').css({"padding-top": function(){
         return (window.innerHeight - $(this).height())/2
       }
     });
-    $('.link_tags').fadeIn();
+    $('#main-container .link_tags').fadeIn();
     console.log(self.firstChild);
     var firstChild = self.firstChild;
     while(firstChild != null && firstChild.nodeType == 3){ // skip TextNodes
@@ -101,14 +107,14 @@ jQuery(document).ready(function($){
     firstChild.setAttribute("style","display:none;");
     firstChild.style.display = "none";
     TweenMax.to(firstChild.nextSibling.nextSibling, 0.5, {opacity: 1, display: "block"});
-    $('.reset-btn').fadeIn();
+    $('#main-container .reset-btn').fadeIn();
     
   })
 
-  $('.reset-btn').click(function (e) {
+  $('#main-container .reset-btn').click(function (e) {
     TweenMax.to('#main-container .pane', 1, {width: "33.33%"});
-    TweenMax.to('.hero, .countdown', 0.5, {opacity: 1, display: "block"});
-    TweenMax.to('.overlay', 0.5, {backgroundColor: "rgba(0,0,0,0.35)"});
+    TweenMax.to('#main-container .hero, .countdown', 0.5, {opacity: 1, display: "block"});
+    TweenMax.to('#main-container .overlay', 0.5, {backgroundColor: "rgba(0,0,0,0.35)"});
     $('#main-container .link_tags').fadeOut();
     $('#main-container .pane-content').fadeOut();
     $(this).fadeOut();
@@ -137,6 +143,8 @@ jQuery(document).ready(function($){
 
 
 
+
+    
 
     //Implementing a separate timer, imported code, may be refactored
 
