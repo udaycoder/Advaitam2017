@@ -58,7 +58,9 @@ html, body {
 body {
     overflow-x: hidden;
 }
-
+.forsquare {
+	
+}
 
 
 .firstSec {
@@ -84,13 +86,14 @@ body {
 .forsquare {
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 0;
     background: rgba(0, 0, 0, 0.6);
     margin-right: -15px;
     margin-left: -15px;
-    font-weight: 400;
-    font-size: 11pt;
-    letter-spacing: .4px;
+	position: fixed;
+	top:0;
+	width: 100%;
+	z-index: 5000;
 }
 
 .place {
@@ -101,7 +104,7 @@ body {
 
 .nav1 {
     text-align: right;
-    margin-top: 50px;
+    margin-top: 18px;
 }
 
     .nav1 li {
