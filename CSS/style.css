@@ -17,10 +17,6 @@ a {
   height: 100vh;
   padding: 0;
 }
-.pane-content
-{
-  pointer-events: none;
-}
 
 .pane-technical
 {
@@ -90,11 +86,12 @@ a {
   padding-bottom: 5px;
   margin-top: 15px;
   background: transparent;
+  cursor: pointer;
 }
 
 .pane-content button:hover
 {
-  
+  color: black;
   background-color: white;
 }
 
@@ -161,6 +158,7 @@ a {
 .link_tags {
   display: none;
   pointer-events: none;
+  padding-top: 400%;
 }
 .link_tags h1{
   font-family: 'LemonMilk', cursive;
@@ -215,7 +213,28 @@ a {
       position:relative;
     }
 
-    .pane-main
+    .overlay-mobile
+{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.pane-mobile
+{
+  height: 100vh;
+  padding: 0;
+}
+
+.pane-technical-mobile
+{
+  background: url('https://s26.postimg.org/4oqu6ywi1/banner.jpg');
+  background-size: cover;
+}
+
+    .pane-main-mobile
     {
       background: url('https://s26.postimg.org/bfbwu591l/CONCERT.jpg');
       background-size: cover;
@@ -223,12 +242,40 @@ a {
       background-repeat: no-repeat;
     }
 
-    .pane-content{
+    .pane-content-mobile{
       padding-top: 5vh;
       text-align: center;
     }
 
-    #mobile-container .overlay
+    .pane-content-mobile h1
+{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'LemonMilk', cursive;
+  font-size: 12vw;
+  font-stretch: expanded;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+}
+
+    .pane-cultural-mobile
+{
+  background: url('https://s26.postimg.org/4l15l2zgp/concert_768722_960_720.jpg');
+  background-size: cover;
+  background-position: 33.33% 0%;
+  background-repeat: no-repeat;
+}
+.pane-social-mobile
+{
+  background: url('https://s26.postimg.org/jahuv7tah/DSC076381.jpg');
+  background-size: cover;
+  background-position:80.66% 0%;
+  background-repeat: no-repeat;
+}
+
+
+    #mobile-container .overlay-mobile
     {
       position: fixed;
       top:0;
@@ -236,24 +283,24 @@ a {
       background-color: rgba(0,0,0,0.45);
     }
 
-    #mobile-container .logo
+    #mobile-container .logo-mobile
     {
       width: 45vw;
     }
 
-    #mobile-container .byline
+    #mobile-container .byline-mobile
     {
       margin-top: 5vh;
       color: white;
       font-size: x-large;
     }
 
-    .content-roll
+    .content-roll-mobile
     {
       position: absolute;
       width: 100vw;
     }
-    .background-roll
+    .background-roll-mobile
     {
       position: absolute;
       width: 100vw;

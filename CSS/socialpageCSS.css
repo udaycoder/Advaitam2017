@@ -1,0 +1,18 @@
+
+@media screen and (min-width:681px) {
+  
+  ul.nav1 li.icon{
+    display: none;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.nav1 li.icon{
+    display:inherit;
+    text-decoration: none;
+    outline: none;
+  }
+  ul.nav1 li.navlist{
+    display:none;
+  }
+}

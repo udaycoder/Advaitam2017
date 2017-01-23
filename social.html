@@ -4,10 +4,12 @@
 
 <!--Head -->
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Essential Meta Tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!--320-->
     <meta name="description" content="SOCIAL">
@@ -20,12 +22,12 @@
     <link rel="shortcut icon" href="./social_files/swan.ico">
     <link rel="icon" href="./social_files/swan.ico" type="image/x-icon">
     <!-- END Icon -->
-    
+
     <!-- CSS Files -->
 
     <!-- Font Awesome Icons -->
   <script src="https://use.fontawesome.com/333b54df0c.js"></script>
-
+     <script src="JS/socialpageJS.js"></script>
     <!-- Lightbox -->
     <link rel="stylesheet" href="./social_files/lightbox.css" />
     <!-- Uikit -->
@@ -39,7 +41,7 @@
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="./social_files/style.css" />
-
+    <link rel="stylesheet" href="CSS/socialpageCSS.css" />
     <!-- End CSS Files -->
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -54,11 +56,14 @@
 
     <!-- First Section -->
     <div id="home" class="container-fluid firstSec" data-uk-parallax="{bg: &#39;-100&#39;}" style="background-size: 2342.4px 1200px; background-repeat: no-repeat; background-position: 50% -28px;">
-        <div class="forsquare" >           
+        <div class="forsquare" >
 		<ul class="nav1">
-                <li> <a href="./cultural.html"> Cultural</a></li>
-                <li> <a href="./technical.html" >Technical</a></li>
-                <li> <a href="#whoami">Calender</a></li>
+      <li class="icon">
+<a href="javascript:void(0);" id="hamburger" >&#9776;</a>
+</li>
+                <li class="navlist"> <a href="./cultural.html"> Cultural</a></li>
+                <li class="navlist"> <a href="./technical.html" >Technical</a></li>
+                <li class="navlist"> <a href="#whoami">Calender</a></li>
             </ul></div>
 
         <div class="container">
@@ -67,11 +72,7 @@
 
             <!-- End Navigation -->
             <!-- Intro Text -->
-            <ul class="custom f-large">
-                <li class="li1"> The <span class="name">Largest</span></li>
-                <li class="li2">Technocultural fest</li>
-                <li class="li3">in North-East</li>
-            </ul>
+            
             <!-- End  Intro Text -->
             <!--Current Location-->
             <div class="text-center whereami">
@@ -111,7 +112,7 @@
                     <img alt="miles" class="gifb" src="./social_files/or1.gif">
                 </div>
 
-                
+
                 <p class="p1">Games</p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
@@ -120,7 +121,7 @@
                 <div class="img gif">
                     <img alt="cities" class="gifb" src="./social_files/or2.gif">
                 </div>
-      
+
                 <p class="p1">Competions</p>
             </div>
 
@@ -207,7 +208,7 @@
                             <ul class="rmGoals">
                                 <li><i class="fa fa-signing"></i> SOCIAL MOVEMENT</li>
                                 <li><i class="fa fa-opencart"></i> Against Discrimination</li>
-                               
+
                             </ul>
                         </div>
                     </div>
@@ -230,7 +231,7 @@
                         <h2 class="heading">Uddan</h2>
 
                         <p class="desc">
-                            Udaan an initiative taken by the Advaitam team, where we try to bring certain aspects of advaitam to the school going children. 
+                            Udaan an initiative taken by the Advaitam team, where we try to bring certain aspects of advaitam to the school going children.
                             Here they play games and take part in events hosted by the students of National Institute of Technology Agartala.
                         </p>
 
@@ -286,7 +287,7 @@
                         <h2 class="heading">Advaitam</h2>
 
                         <p class="desc">
-                           
+
 Advaitam is a single display platform for showcasing the innovativeness and brilliance of budding as well as adept campaigners both technologically and culturally it is a single stand supporting a variety of contents and performances supporting the promotion of youth culture expending opportunities and to channelize youths for a social gathering. Thereby imbibing in an inspirational zeal among the youths.
                         </p>
 
@@ -329,7 +330,7 @@ Advaitam is a single display platform for showcasing the innovativeness and bril
 
                         <p class="desc">
                             Saamya is a movement against the discrimination faced by the people of north-eastern states from the inhabitants of rest of the India.
-                            Saamya wishes to tackle the problem of racism prevalent in mainland India against people of different ethinicities (including Nepali,Bhutani etc) 
+                            Saamya wishes to tackle the problem of racism prevalent in mainland India against people of different ethinicities (including Nepali,Bhutani etc)
                         </p>
 
                         <iframe height="400" src="https://youtube.com/embed/bLHg072qwNw" allowfullscreen=" ">asd</iframe>
@@ -369,7 +370,7 @@ Advaitam is a single display platform for showcasing the innovativeness and bril
 
     </div>
     <!--End Sixth Section-->
-    
+
 
 
     <!--Fifth Section-->
@@ -425,7 +426,7 @@ Advaitam is a single display platform for showcasing the innovativeness and bril
                         <li>
                             <i class="fa fa-youtube"></i> <a href="https://www.youtube.com/user/AdvaitamVeVo">@AdvaitamVevo</a>
                         </li>
-                       
+
                         <li>
                             <i class="fa fa-instagram"></i> <a href="https://www.instagram.com/advaitam.online/">@Advaitam.Online</a>
                         </li>
@@ -439,8 +440,8 @@ Advaitam is a single display platform for showcasing the innovativeness and bril
         </div>
     </div>
     <!--End Fifth Section-->
-   
-   
+
+
     <!--End Seventh Section-->
     <!-- JavaSript Files -->
     <!-- Essential JS Files -->
