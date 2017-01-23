@@ -445,7 +445,37 @@ Advaitam is a single display platform for showcasing the innovativeness and bril
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom Codes -->
-    <script type="text/javascript" src="./social_files/custom.js.download"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+
+
+
+    });
+
+    /* 02. RoadMap Details First Run */
+
+    $(".rmRight .header").on('click', function () {
+
+        //$(".rmDetail iframe").each(function () {
+        //    $(this).attr("src", $(this).attr("src"));
+        //});
+
+        var id = $(this).attr("data-target-container-id");
+        $(".rmDetail").hide();
+        $("#" + id).fadeIn(1000);
+
+        $(".rmRight .header").removeClass("active");
+        $(this).addClass("active");
+
+    });
+
+
+
+
+
+    </script>
+
 
     <!-- uikit -->
     <script type="text/javascript" src="./social_files/uikit.min.js.download"></script>

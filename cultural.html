@@ -4,6 +4,8 @@
 
 <!--Head -->
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Essential Meta Tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -166,7 +168,7 @@
                         </div>
 
                         <div class="rmRight">
-                            <a data-target-container-id="cont1" class="header active">Advaitam Day 0</a>
+                            <a href="cont1" class="header active">Advaitam Day 0</a>
                              <ul class="rmGoals">
                                 <li><i class="fa fa-scissors"></i> Inauguration</li>
                                 <li><i class="fa fa-music"></i> Musical Performance</li>
@@ -483,7 +485,36 @@ This combined with the Dj night combine to give an experience like no other.
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Custom Codes -->
-    <script type="text/javascript" src="./social_files/custom.js.download"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+  
+
+
+    });
+
+    /* 02. RoadMap Details First Run */
+
+    $(".rmRight .header").on('click', function () {
+
+        //$(".rmDetail iframe").each(function () {
+        //    $(this).attr("src", $(this).attr("src"));
+        //});
+
+        var id = $(this).attr("data-target-container-id");
+        $(".rmDetail").hide();
+        $("#" + id).fadeIn(1000);
+
+        $(".rmRight .header").removeClass("active");
+        $(this).addClass("active");
+
+    });
+
+    
+
+
+
+    </script>
 
     <!-- uikit -->
     <script type="text/javascript" src="./social_files/uikit.min.js.download"></script>

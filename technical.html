@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <!-- saved from url=(0045)file:///C:/Users/Arpan/Downloads/new%201.html -->
-<html lang="zxx" class="uk-notouch">
+<html lang="en" class="uk-notouch">
 
 <!--Head -->
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Essential Meta Tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -142,7 +144,8 @@
         </div>
     </div>
     <!--End Third Section-->
- <!--Fourth Section-->
+ <!--Fourth Section                  jquery for view     -->
+
     <div id="roadmap" class="container-fluid fourthSection">
         <div class="container">
             <div class="row">
@@ -474,13 +477,39 @@ This combined with the Dj night combine to give an experience like no other.
     <!--End Seventh Section-->
     <!-- JavaSript Files -->
     <!-- Essential JS Files -->
-    <script type="text/javascript" src="./social_files/jquery-2.2.4.min.js.download"></script>
-
-    <!-- Bootstrap -->
-    <script type="text/javascript" src="./social_files/bootstrap.min.js.download"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Custom Codes -->
-    <script type="text/javascript" src="./social_files/custom.js.download"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+    "use strict";
+
+
+    });
+
+    /* 02. RoadMap Details First Run */
+
+    $(".rmRight .header").on('click', function () {
+
+        //$(".rmDetail iframe").each(function () {
+        //    $(this).attr("src", $(this).attr("src"));
+        //});
+
+        var id = $(this).attr("data-target-container-id");
+        $(".rmDetail").hide();
+        $("#" + id).fadeIn(1000);
+
+        $(".rmRight .header").removeClass("active");
+        $(this).addClass("active");
+
+    });
+
+
+
+    </script>
+
 
     <!-- uikit -->
     <script type="text/javascript" src="./social_files/uikit.min.js.download"></script>
