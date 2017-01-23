@@ -1,7 +1,9 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
+.btn{
+  background-color: #fff;
+}
 a {
   color: #00B7FF;
 }
@@ -85,7 +87,7 @@ a {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 15px;
-  background: transparent;
+  
   cursor: pointer;
 }
 
