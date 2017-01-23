@@ -84,33 +84,34 @@ body {
 .forsquare {
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 0;
     background: rgba(0, 0, 0, 0.6);
     margin-right: -15px;
     margin-left: -15px;
-    font-weight: 400;
-    font-size: 11pt;
-    letter-spacing: .4px;
+	position: fixed;
+	top:0;
+	width: 100%;
+	z-index: 5000;
 }
 
 .place {
-    color: #000080;
+    color: #999999;
     font-weight: 500;
 }
 
 
 .nav1 {
     text-align: right;
-    margin-top: 50px;
-}
+    margin-top: 18px;
 
+}
     .nav1 li {
         display: inline-block;
         margin-bottom: 10px;
     }
 
         .nav1 li a {
-            color: black;
+            color: white;
             text-decoration: none;
             padding: 10px 20px;
         }
