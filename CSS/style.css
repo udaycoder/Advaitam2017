@@ -8,6 +8,8 @@ a {
   color: #00B7FF;
 }
 
+
+
 #main-container {
  position: relative;
  margin: 0;
@@ -87,7 +89,7 @@ a {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 15px;
-  
+
   cursor: pointer;
 }
 
@@ -341,6 +343,7 @@ h2 strong {
 .countdown {
   width: 80vw;
   margin: 20px auto;
+  margin-left: 18%;
 }
 .countdown .bloc-time {
   float: left;
