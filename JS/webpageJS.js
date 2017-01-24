@@ -156,13 +156,13 @@ jQuery(document).ready(function($){
   })
 
   $('.pane-technical button').click(function () {
-    window.location.href = "http://www.google.com";
+    window.location.href = "./technical.html";
   })
   $('.pane-cultural button').click(function () {
-    window.location.href = "http://www.google.com";
+    window.location.href = "./cultural.html";
   })
   $('.pane-social button').click(function () {
-    window.location.href = "http://www.google.com";
+    window.location.href = "./social.html";
   })
 
 		$(window).on('scroll', function() {
